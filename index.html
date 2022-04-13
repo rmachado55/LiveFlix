@@ -1,0 +1,75 @@
+<!-- Site meramente fictício desenvolvido por Ricardo Machado com fins acadêmicos nas disciplinas de HTML5 e CSS3
+Contato: ricardo.machado7@hotmail.com / github/rmachado55-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Quicksand:wght@300;400;700&display=swap" rel="stylesheet">  
+    <script src="https://kit.fontawesome.com/edb735f012.js" crossorigin="anonymous"></script>
+
+    <!-- Responsividade-->    
+<link rel="stylesheet" href="style/responsive.css">
+
+    <!-- OWL CSS para o carrossel-->    
+    <link rel="stylesheet" href="style/owl/owl.carousel.min.css">
+    <link rel="stylesheet" href="style/owl/owl.theme.default.min.css">
+    
+    <title>LiveFlix</title>
+</head>
+<script src="js/conteudo.js"></script>
+<body>
+    <header>
+        <div class="container">
+        <h1 class="logo">LiveFlix</h1>
+            <nav>
+                <a href="@">Início</a>
+                <a href="@">Sobre</a>
+            </nav>
+        </div>
+    </header>
+    <script type="text/javascript">
+        const rndInt = Math.floor(Math.random() * 6)
+    </script>
+    <main>
+        <div class="destaque">
+            <div class="container">
+                <h3 class="titulo"><script>document.write(bandas[rndInt]);</script><script>document.write(anos[rndInt])</script></h3>
+                <p class="descricao">Local:<script> document.write(locais[rndInt]);
+                document.write(paises[rndInt])
+                </script></p>
+            <div class="botoes">
+                <button role="button" class="botao">
+                <i class="fa-solid fa-play"></i> ASSISTIR AGORA
+                </button>
+                <button role="button" class="botao">
+                <i class="fa-solid fa-circle-info"></i> MAIS DETALHES
+                </button>
+            </div>
+            </div>
+    </main>
+    
+    <!-- CARROSSEL-->       
+    <div class="carrosel">
+        <div class="owl-carousel owl-theme">
+            <div class="box-show"><img src="img/R01.jpg"><a href="https://www.youtube.com/watch?v=7Mxg4VkkRRI" target="blank"><h4>Linkin Park - Live in Texas</h4></a></div>
+            <div class="box-show"><img src="img/R02.jpg"><h4>Queen - Rock in Rio</h4></div>
+            <div class="box-show"><img src="img/R04.jpg"><h4>Deep Purple - Perfect Strangers LIVE</h4></div>
+            <div class="box-show"><img src="img/E01.jpg"><a href="https://www.youtube.com/watch?v=iS7-iBia7GE" target="blank"><h4>Bob Marley - Live in Santa Monica</h4></a></div>
+            <div class="box-show"><img src="img/P01.jpg"><h4>Alicia Keys - unplugged</h4></div>        
+        </div>
+        </div>
+        
+    <script src="https://kit.fontawesome.com/edb735f012.js"></script>
+    <script src="js/owl/jquery.min.js"></script>
+    <script src="js/owl/owl.carousel.min.js"></script>
+    <script src="js/owl/setup.js"></script>
+
+</body>
+</html>
