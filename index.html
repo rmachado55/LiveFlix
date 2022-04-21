@@ -11,10 +11,11 @@ Contato: ricardo.machado7@hotmail.com / github/rmachado55-->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link id="page_favicon" href="data:image/x-icon;base64,R0lGODlhEAAQAPAAAAAAAAAAACH5BAlkAAEAIf8LTkVUU0NBUEUyLjADAQAAACwAAAAAEAAQAAAC50wSEREREUIIIYQQQgghBAAAQRAEQRAEQRAAABAAQRAEQRAEAQAAQRAABAKBQCAQCAAAgUAgEAAEAoFAIBAIAAKBQCAQAAQCgUAgEAgAAoFAIBAABAKBQCAQCAACgUAgEAAQEBAQEBAQEAAQEBAQEAAAEBAQEBAQEBAAEBAQEAAAABAQEBAQEBAAABAQEBAAABAQEBAQEBAAAAAQEBAQEBAQEBAQEBAQAAAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQIECAAAEKAAAh+QQJZAABACwAAAAAEAAQAAAC50wSEREREUIIIYQQAgAghBAEQRAEQRAEQAAAABAEQRAEQRAEQBAEAQAABAKBQCAQCAACgUAgEAAEAoFAIBAIAAKBQCAQAAQCgUAgEAgAAoFAIBAABAKBQCAQCAACgUAgEAAQEBAQEBAQAAAQEBAQEBAAEBAQEBAQAAAAEBAQEBAQABAQEBAQEAAAEBAQEBAQAAAQEBAQEBAQEBAQEBAQAAAAEBAQEBAQEBAQEBAQEAAAEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQIECAAAEKAAA7" rel="icon" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Quicksand:wght@300;400;700&display=swap" rel="stylesheet">  
     <script src="https://kit.fontawesome.com/edb735f012.js" crossorigin="anonymous"></script>
 
-    <!-- Responsividade-->    
+    <!-- Responsividade / Permite visualização harmônica em vários formatos e tamanhos de tela-->    
 <link rel="stylesheet" href="style/responsive.css">
 
     <!-- OWL CSS para o carrossel-->    
@@ -23,53 +24,97 @@ Contato: ricardo.machado7@hotmail.com / github/rmachado55-->
     
     <title>LiveFlix</title>
 </head>
-<script src="js/conteudo.js"></script>
 <body>
     <header>
         <div class="container">
-        <h1 class="logo">LiveFlix</h1>
+        <h1 class="logo" title="LiveFlix é uma seleção de diversos shows completos e gratuítos.">LiveFlix</h1>
             <nav>
-                <a href="@">Início</a>
-                <a href="@">Sobre</a>
+                <a class="menu" href="index.html"><i class="fa-solid fa-house"></i>Início</a>
+                <a class="menu" href="https://github.com/rmachado55" target="blank"><i class="fa-brands fa-github"></i>GitHub</a>
+                <a class="menu" href="https://www.linkedin.com/in/ricardo-machado-22939b229/" target="blank"><i class="fa-brands fa-linkedin"></i>LinkedIn</a>
             </nav>
         </div>
     </header>
-    <script type="text/javascript">
-        const rndInt = Math.floor(Math.random() * 6)
-    </script>
-    <main>
-        <div class="destaque">
-            <div class="container">
-                <h3 class="titulo"><script>document.write(bandas[rndInt]);</script><script>document.write(anos[rndInt])</script></h3>
-                <p class="descricao">Local:<script> document.write(locais[rndInt]);
-                document.write(paises[rndInt])
-                </script></p>
+<main>
+    <div class="destaque" id="destaque">
+        <div class="container">
+                <h4 class="chamada">Show Imperdível:</h4>
+                <h3 class="titulo">Jimi Hendrix</h3>
+                <p class="descricao">O lendário guitarrista, cantor e compositor em uma inspirada apresentação no último dia do festival Woodstock (1969), que levou ao mundo 3 dias de Paz, Amor e Música.</p>
             <div class="botoes">
-                <button role="button" class="botao">
+                <a href='https://www.youtube.com/watch?v=4TgbWOy6Buk' target="_blank"><button role="button" class="botao">
                 <i class="fa-solid fa-play"></i> ASSISTIR AGORA
-                </button>
-                <button role="button" class="botao">
-                <i class="fa-solid fa-circle-info"></i> MAIS DETALHES
-                </button>
-            </div>
-            </div>
-    </main>
+                </button></a>
+                <a href='https://whiplash.net/materias/curiosidades/208755-jimihendrix.html' target="_blank"><button role="button" class="botao">
+                    <i class="fa-solid fa-circle-info"></i> SAIBA MAIS
+                </button></a>
+        </div>
+    </div>
+</main>
     
-    <!-- CARROSSEL-->       
-    <div class="carrosel">
-        <div class="owl-carousel owl-theme">
-            <div class="box-show"><img src="img/R01.jpg"><a href="https://www.youtube.com/watch?v=7Mxg4VkkRRI" target="blank"><h4>Linkin Park - Live in Texas</h4></a></div>
-            <div class="box-show"><img src="img/R02.jpg"><h4>Queen - Rock in Rio</h4></div>
-            <div class="box-show"><img src="img/R04.jpg"><h4>Deep Purple - Perfect Strangers LIVE</h4></div>
-            <div class="box-show"><img src="img/E01.jpg"><a href="https://www.youtube.com/watch?v=iS7-iBia7GE" target="blank"><h4>Bob Marley - Live in Santa Monica</h4></a></div>
-            <div class="box-show"><img src="img/P01.jpg"><h4>Alicia Keys - unplugged</h4></div>        
+    <!-- CARROSSEL MAIS ASSISTIDOS-->       
+    <div title="Navegue pelas opções arrastando para os lados" class="container">
+        <div class="carrosel">
+            <h4 class="chamada">Mais assistidos:</h4>
+            <div class="owl-carousel owl-theme">
+                <div class="box-show"><a href="https://www.youtube.com/watch?v=IWUrdWIQcD0" target="blank"><img src="style/img/0.jpg"></i><h4>Queen</h4><h5>1985 - Rio de Janeiro</h5></a></div>
+                <div class="box-show"><a href="https://www.youtube.com/watch?v=9shByOh8fVE" target="blank"><img src="style/img/1.jpg"></i><h4>Michael Jackson</h4><h5>1988 - Wembley</h5></a></div>
+                <div class="box-show"><a href="https://www.youtube.com/watch?v=id_JFzDQPek" target="blank"><img src="style/img/2.jpg"></i><h4>Elvis Presley</h4><h5>1973 - Onolulu</h5></a></div>
+                <div class="box-show"><a href="https://www.youtube.com/watch?v=FmrGz8qSyrk" target="blank"><img src="style/img/4.jpg"></i><h4>Red Hot Chili Peppers</h4><h5>2003 - Slane</h5></a></div>
+                <div class="box-show"><a href="https://www.youtube.com/watch?v=1aU8Of01izY" target="blank"><img src="style/img/5.jpg"></i><h4>Beatles</h4><h5>1964 - Sidney</h5></a></div>
+                <div class="box-show"><a href="https://www.youtube.com/watch?v=iS7-iBia7GE" target="blank"><img src="style/img/13.jpg"></i><h4>Bob Marley</h4><h5>1979 - Santa Barbara</h5></a></div>
+                <div class="box-show"><a href="https://www.youtube.com/watch?v=ZoEbdL0RUv8" target="blank"><img src="style/img/17.jpg"></i><h4>One Direction</h4><h5>2015 - Milão</h5></a></div>
+                <div class="box-show"><a href="https://www.youtube.com/watch?v=7Mxg4VkkRRI" target="blank"><img src="style/img/16.jpg"></i><h4>Linkin Park</h4><h5>2003 - Houston</h5></a></div>
+                <div class="box-show"><a href="https://www.youtube.com/watch?v=-Xt4MfuLO54" target="blank"><img src="style/img/23.jpg"></i><h4>Rolling Stones</h4><h5>1989 - Atlantic City</h5></a></div>         
+            </div>
+        </div>
+    </div>
+        <!-- CARROSSEL ROCK-->       
+    <div title="Navegue pelas opções arrastando para os lados" class="container">
+        <div class="carrosel">
+            <h4 class="chamada">Rock:</h4>
+            <div class="owl-carousel owl-theme">
+                <div class="box-show"><a href="https://www.youtube.com/watch?v=C0xcvOEXqrk" target="blank"><img src="style/img/7.jpg"></i><h4>Metallica</h4><h5>1991 - Moscou</h5></a></div>
+                <div class="box-show"><a href="https://www.youtube.com/watch?v=pnrx1UV6mdQ" target="blank"><img src="style/img/8.jpg"></i><h4>Foo Fighters</h4><h5>2015 - Nürburg</h5></a></div>
+                <div class="box-show"><a href="https://www.youtube.com/watch?v=Ul7sWoGaKIs" target="blank"><img src="style/img/9.jpg"></i><h4>Nirvana</h4><h5>1991 - Seattle</h5></a></div>
+                <div class="box-show"><a href="https://www.youtube.com/watch?v=ceE9E_TyYxU" target="blank"><img src="style/img/10.jpg"></i><h4>Roxette</h4><h5>1991 - Zurique</h5></a></div>
+                <div class="box-show"><a href="https://www.youtube.com/watch?v=pwdJvGcPXQI" target="blank"><img src="style/img/11.jpg"></i><h4>Deep Purpĺe</h4><h5>1985 - Paris</h5></a></div>
+                <div class="box-show"><a href="https://www.youtube.com/watch?v=IG5VNDZGYck" target="blank"><img src="style/img/12.jpg"></i><h4>Iron Maiden</h4><h5>2005 - Gotemburgo</h5></a></div>
+                <div class="box-show"><a href="https://www.youtube.com/watch?v=sLmJAJFNwsA" target="blank"><img src="style/img/35.jpg"></i><h4>Scorpions</h4><h5>1993 - Munique</h5></a></div>    
+                <div class="box-show"><a href="https://www.youtube.com/watch?v=GCC8gWTOkEk" target="blank"><img src="style/img/15.jpg"></i><h4>AC/DC</h4><h5>2009 - Buenos Aires</h5></a></div>
+                <div class="box-show"><a href="https://www.youtube.com/watch?v=02rA73MFqoU" target="blank"><img src="style/img/19.jpg"></i><h4>Lenny Kravitz</h4><h5>1993 - Wembley</h5></a></div>
+                <div class="box-show"><a href="https://www.youtube.com/watch?v=F4VjsqR5Vbc" target="blank"><img src="style/img/24.jpg"></i><h4>The Police</h4><h5>1980 - Hamburgo</h5></a></div>
+                <div class="box-show"><a href="https://www.youtube.com/watch?v=4q2sIZUSLRA" target="blank"><img src="style/img/25.jpg"></i><h4>Pearl Jam</h4><h5>1992 - Landgraaf</h5></a></div>
+                <div class="box-show"><a href="https://www.youtube.com/watch?v=3FE70D5mRp0" target="blank"><img src="style/img/27.jpg"></i><h4>Eric Clapton</h4><h5>2001 - Tóquio</h5></a></div>
+                <div class="box-show"><a href="https://www.youtube.com/watch?v=Ge2ioD9rhfg" target="blank"><img src="style/img/32.jpg"></i><h4>Blink 182</h4><h5>2000 - Daytona Beach</h5></a></div>
+                <div class="box-show"><a href="https://www.youtube.com/watch?v=dO-Y_fMuc4c" target="blank"><img src="style/img/34.jpg"></i><h4>Greenday</h4><h5>2019 - Sevilha</h5></a></div>
+            </div>
+        </div>
+    </div>
+     <!-- CARROSSEL POP E HIP HOP-->       
+     <div title="Navegue pelas opções arrastando para os lados" class="container">
+        <div class="carrosel">
+            <h4 class="chamada">Pop e Hip Hop:</h4>
+            <div class="owl-carousel owl-theme">
+                <div class="box-show"><a href="https://www.youtube.com/watch?v=OUnAbh87JVY" target="blank"><img src="style/img/18.jpg"></i><h4>Madonna</h4><h5>1987 - Florença</h5></a></div>
+                <div class="box-show"><a href="https://www.youtube.com/watch?v=RIZisgWULqY" target="blank"><img src="style/img/21.jpg"></i><h4>Maroon 5</h4><h5>2017 - Rio de Janeiro</h5></a></div>
+                <div class="box-show"><a href="https://www.youtube.com/watch?v=uhuvL7tmFGY" target="blank"><img src="style/img/22.jpg"></i><h4>The Weeknd</h4><h5>2018 - Coachella</h5></a></div>
+                <div class="box-show"><a href="https://www.youtube.com/watch?v=zOmtFi9f_A4" target="blank"><img src="style/img/6.jpg"></i><h4>Bruno Mars</h4><h5>2018 - Lisboa</h5></a></div>
+                <div class="box-show"><a href="https://www.youtube.com/watch?v=UbetyRqm-0Y" target="blank"><img src="style/img/14.jpg"></i><h4>Alicia Keys</h4><h5>2004 - Roterdã</h5></a></div>
+                <div class="box-show"><a href="https://www.youtube.com/watch?v=ldWvm-ZqKaY" target="blank"><img src="style/img/28.jpg"></i><h4>Eminem</h4><h5>2015 - Nova Iorque</h5></a></div>
+                <div class="box-show"><a href="https://www.youtube.com/watch?v=l7-sPhFnd2M" target="blank"><img src="style/img/31.jpg"></i><h4>U2</h4><h5>2011 - Pilton</h5></a></div>
+                <div class="box-show"><a href="https://www.youtube.com/watch?v=5o5rAQlpzYc" target="blank"><img src="style/img/33.jpg"></i><h4>Jason Mraz</h4><h5>2017 - São Paulo</h5></a></div>         
         </div>
         </div>
+        </div>  
         
+<!-- CARROSSEL POP E HIP HOP-->    
+    <footer>
+        <p>Conteúdo meramente fictício para fins didáticos.</p>
+    </footer>
     <script src="https://kit.fontawesome.com/edb735f012.js"></script>
     <script src="js/owl/jquery.min.js"></script>
     <script src="js/owl/owl.carousel.min.js"></script>
     <script src="js/owl/setup.js"></script>
-
 </body>
 </html>

@@ -1,10 +1,13 @@
 /*Site meramente fictício desenvolvido por Ricardo Machado com fins acadêmicos nas disciplinas de HTML5 e CSS3
 Contato: ricardo.machado7@hotmail.com / github/rmachado55 */
 
-/* Identidade visual de todo projeto.  */
+/* Identidade visual de todo projeto. Cores variáveis, permitindo mudar toda identidade do projeto em segundos */
 :root {
-    --primaria: #ffb554;
-    --fundo: #261a0f;
+    --primaria: #ffb977d5;
+    --fundo: #0f0c00;
+    --logo:  #fc9700;
+    --sombras: #4d1709;
+    --textos: #ebe7e7;
 }
 
 /* RESET da página afim de evitar bordas e espaçamentos indesejados ou que variem de navegador para navegador e marcação padrão em Hiperlinks*/
@@ -14,20 +17,42 @@ Contato: ricardo.machado7@hotmail.com / github/rmachado55 */
     box-sizing: border-box;
 }
 
-a:link {
+a {
     text-decoration: none;
-    color: white;
+    color: var(--textos)
 }
- 
+
+a:link, a:visited {
+    text-decoration: none;
+    color: var(--textos);
+}
+
 /* Propriedades da página */
 
 body {
     background: var(--fundo);
     font-family: 'Quicksand', sans-serif;
-    color: white;
+    color: var(--textos);
 }
 
-/* Barra de navegação*/
+/* Barra de navegação com os LINKS de apoio.*/
+
+.menu {
+    font-size: 24px;
+    padding-right: 30px;
+}
+
+.menu i {
+    padding-right: 5px;
+}
+
+.menu:hover {
+    color: var(--primaria);
+}
+
+header {
+    background-image: linear-gradient(to bottom, rgba(150,150,150,0.3), rgba(0,0,0,0))
+}
 
 header .container {
     display: flex;
@@ -38,54 +63,63 @@ header .container {
 }
 
 header .logo {
-    margin-left: 10px;
     font-family: 'Lobster', cursive;
-    color: var(--primaria);
-    font-size: 60px;
-    font-weight: 400;
-    text-shadow: black 2px 2px;
-   }
+    color: var(--logo);
+    font-size: 90px;
+    font-weight: 500;
+    text-shadow: var(--sombras) 3px 3px;
+}
 
-/* Primeiro box com Filmes Destaque, descrição, ilustração e botões  */
+/* Primeiro box com show em destaque, descrição, ilustração e botões  */
+
 .destaque {
-    margin-top: 12px;
-    font-size: 16px;
-    background-image: url('img/10.jpg'), linear-gradient(rgba(0,0,0,0.50),rgba(0,0,0,0.50)100%);
-    height: 400px;
+    background-image: linear-gradient(to right, rgba(0,0,0,0.9), rgba(0,0,0,0.7), rgba(0,0,0,0.2)), url('img/3f.jpg');
     background-size: cover;
+    background-position: center;
+    margin-top: 18px;
+    margin-bottom: 18px;
+    text-shadow: var(--sombras) 2px 2px;
+    height: 320px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
     font-weight: 300;
 }
+.chamada {
+    font-size: 26px;
+    color: var(--primaria);
+    padding-top: 20px;
+    padding-bottom: 2px;
+    text-shadow: var(--sombras) 2px 2px;
+}
 
 .destaque .descricao {
-    margin-bottom: 30px;
-    margin-top: 10px;
+    margin-bottom: 10px;
     font-style: italic;
-    font-size: 14px;
+    font-size: 18px;
 }
 
 .titulo {
-    margin-top: 15%;
-    font-size: 30px;
+    font-size: 54px;
     font-family: 'Lobster', cursive;
-    color: var(--primaria);
     text-shadow: black, 1px 1px;
 }
 
 .botao {
-    background-color: rgba(0,0,0,0.50);
+    background-color: rgba(0,0,0,0.40);
     border: none;
-    border-radius: 8%;
+    border-radius: 10%;
     color: var(--primaria);
-    padding: 12px;
-    margin-right: 10px;
+    padding: 8px;
+    margin-top: 9px;
     font-size: 14px;
-    font-weight: 700;
+    font-family: 'Quicksand', sans-serif;
     cursor: pointer;
-    transition: 0.5s ease all;
+    transition: 0.9s ease all;
+    border-color: var(--primaria);
+    border-width: 1px;
+    border-style: dashed;
     }
 
 .botao:hover{
@@ -96,15 +130,56 @@ header .logo {
 .botao i{
     margin-right: 9px;
 }
+
 .container {
-    margin-left: 20px;
+    margin-left: 40px;
 }
+
 .destaque .container{
-    width: 40%;
+    width: 49%;
 }
+
+/* Estilo dos 3 Carrossels   */
+
 .box-show {
-    margin-top: 12px;
+    margin-top: 10px;
     height: 100%;
     display: block;
+    text-align: center;
 }
+
+.box-show h4:hover   {
+    color: var(--primaria);
+}
+
+.box-show h4 {
+    font-size: 16px;
+    font-family: 'Quicksand', sans-serif;
+    font-style: bold;
+    font-stretch: ultra-condensed;
+            }  
+
+.box-show h5 {
+    font-size: 13px;
+    font-family: 'Quicksand', sans-serif;
+    font-style: italic;
+    font-weight: 100;
+    font-stretch: ultra-condensed;
+    }     
+
+.box-show img {
+    border-radius: 5%;
+    }
+
+/* Rodapé com notas legais; */
+
+footer {
+    background-color: var(--primaria);
+    color: var(--fundo);
+    text-align: center;
+    font-size: 14px;
+    font-style: italic;
+    padding: 4px;
+}
+
 
